@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 
-def swarmMaster = "10.100.192.200"
-def proxy = "10.100.192.200"
+def swarmMaster = "192.168.56.200"
+def proxy = "192.168.56.200"
 def currentColor = getCurrentColor(swarmMaster, service)
 def nextColor = getNextColor(currentColor)
 def instances = getInstances(swarmMaster, service)
