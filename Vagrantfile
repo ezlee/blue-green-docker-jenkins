@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "swarm-master" do |d|
     d.vm.box = "ubuntu/vivid64"
     d.vm.hostname = "swarm-master"
-    d.vm.network "private_network", ip: "10.100.192.200"
+    d.vm.network "private_network", ip: "192.168.56.200"
     d.vm.provider "virtualbox" do |v|
       v.memory = 2048
     end
@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define "swarm-node-#{i}" do |d|
       d.vm.box = "ubuntu/vivid64"
       d.vm.hostname = "swarm-node-#{i}"
-      d.vm.network "private_network", ip: "10.100.192.20#{i}"
+      d.vm.network "private_network", ip: "192.168.56.20#{i}"
       d.vm.provider "virtualbox" do |v|
         v.memory = 1024
       end
